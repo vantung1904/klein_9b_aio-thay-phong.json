@@ -1,0 +1,130 @@
+{
+  "input": {
+    "workflow": {
+      "10": {
+        "inputs": {
+          "value": false
+        },
+        "class_type": "SDVN Load Checkpoint",
+        "_meta": {
+          "title": "SDVN Load Checkpoint"
+        }
+      },
+      "12": {
+        "inputs": {
+          "text": "Luxurious Neoclassical grand living room interior, opulent traditional European style, high ceilings with elaborate crown molding and decorative recessed panels, a magnificent multi-tiered crystal chandelier casting a warm radiant glow, bright ambient lighting from recessed ceiling spotlights, soft natural light cascading through tall multi-paneled French windows adorned with elegant cream-colored drapes, polished light marble flooring with intricate gold and cream patterned borders, a sprawling central area rug featuring detailed floral and scroll motifs in rich emerald green, cream, and soft teal, walls embellished with classical wainscoting and paneling in warm off-white and beige tones, sophisticated furniture arrangements including a plush cream tufted sofa, a stately golden yellow leather Chesterfield sofa with delicate stud detailing, elegant cream upholstered armchairs with carved wooden frames, a dark polished wood oval coffee table with a clear glass top and intricate carvings, round ornate side tables, verdant potted plants, a grand white marble fireplace featuring an ornate mantelpiece crowned by a decorative mirror and graceful abstract sculptures, a modern black mobile stand holding a television screen positioned to the left, a recessed doorway revealing an adjacent space with a striking blue accent wall and dark polished wooden flooring, atmosphere of refined comfort and timeless luxury, hyperrealistic, photorealistic, exquisite detail, sharp focus, vibrant and inviting color palette dominated by warm neutrals, golden yellows, deep greens, and subtle blues, high definition, detailed textures of wood, fabric, crystal, and stone, cinematic quality",
+          "clip": [
+            "49",
+            1
+          ]
+        },
+        "class_type": "SDVN CLIP Text Encode Simple",
+        "_meta": {
+          "title": "SDVN CLIP Text Encode Simple"
+        }
+      },
+      "13": {
+        "inputs": {
+          "text": "Auto",
+          "model": [
+            "49",
+            0
+          ],
+          "positive": [
+            "15",
+            0
+          ],
+          "latent_image": [
+            "15",
+            3
+          ],
+          "vae": [
+            "10",
+            2
+          ]
+        },
+        "class_type": "SDVN KSampler",
+        "_meta": {
+          "title": "SDVN KSampler"
+        }
+      },
+      "15": {
+        "inputs": {
+          "value": 2048,
+          "conditioning": [
+            "12",
+            0
+          ],
+          "vae": [
+            "10",
+            2
+          ],
+          "image": [
+            "16",
+            0
+          ],
+          "mask": [
+            "295",
+            0
+          ]
+        },
+        "class_type": "SDVN Apply Kontext Reference",
+        "_meta": {
+          "title": "SDVN Apply Kontext Reference"
+        }
+      },
+      "16": {
+        "inputs": {
+          "value": false
+        },
+        "class_type": "SDVN Load Image",
+        "_meta": {
+          "title": "SDVN Load Image"
+        }
+      },
+      "17": {
+        "inputs": {
+          "text": "SDVN",
+          "image": [
+            "13",
+            1
+          ],
+          "compare_image": [
+            "16",
+            0
+          ]
+        },
+        "class_type": "SDVN Save Image",
+        "_meta": {
+          "title": "SDVN Save Image"
+        }
+      },
+      "49": {
+        "inputs": {
+          "value": false,
+          "model": [
+            "10",
+            0
+          ],
+          "clip": [
+            "10",
+            1
+          ]
+        },
+        "class_type": "SDVN Load Lora",
+        "_meta": {
+          "title": "SDVN Load Lora"
+        }
+      },
+      "295": {
+        "inputs": {
+          "filename": "msaconcept-3530b515.png"
+        },
+        "class_type": "LoadImageMask",
+        "_meta": {
+          "title": "LoadImageMask"
+        }
+      }
+    }
+  }
+}
